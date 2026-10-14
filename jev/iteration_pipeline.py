@@ -53,7 +53,7 @@ if __name__ == "__main__":
     p.add_argument("observations")
     p.add_argument("--live", action="store_true", help="Use DefAPI Jev observer")
     args = p.parse_args()
-    turns = json.loads(Path(args.transcript).read_text(encoding="utf-8"))
+    turns = json.loads(Path(args.transcript).read_text(encoding="utf-8-sig"))
     if args.live:
         from jev_defapi import observe
         def live_observer(turn_id, prefix):
