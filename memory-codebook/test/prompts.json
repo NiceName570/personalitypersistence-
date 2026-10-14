@@ -1,0 +1,7 @@
+[
+  {"id": "recall_decision", "prompt": "What did we decide about using Mem0 or other existing memory tools?", "expect": ["own"]},
+  {"id": "recall_api", "prompt": "Why aren't we calling the Anthropic API for extraction?", "expect": ["credit"]},
+  {"id": "recall_numbers", "prompt": "Are the numbers I gave at the start (2 3 2 4 41 2 42134) part of the spec?", "expect": ["random", "example"]},
+  {"id": "style_explain", "prompt": "Explain what a vector embedding is.", "expect": []},
+  {"id": "style_next", "prompt": "What should I do next on this project?", "expect": []}
+]

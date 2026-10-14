@@ -1,0 +1,390 @@
+{
+ "version": 5,
+ "columns": [
+  {
+   "name": "tone",
+   "codes": {
+    "1": "neutral",
+    "2": "casual",
+    "3": "blunt",
+    "4": "formal",
+    "5": "playful"
+   },
+   "section": "user"
+  },
+  {
+   "name": "verbosity",
+   "codes": {
+    "1": "minimal",
+    "2": "short",
+    "3": "medium",
+    "4": "long",
+    "5": "exhaustive"
+   },
+   "section": "user"
+  },
+  {
+   "name": "format",
+   "codes": {
+    "1": "prose",
+    "2": "bullets",
+    "3": "code",
+    "4": "tables",
+    "5": "mixed"
+   },
+   "section": "user"
+  },
+  {
+   "name": "expertise",
+   "codes": {
+    "1": "new to topic",
+    "2": "beginner",
+    "3": "intermediate",
+    "4": "advanced",
+    "5": "expert"
+   },
+   "section": "user"
+  },
+  {
+   "name": "pace",
+   "codes": {
+    "1": "explore ideas",
+    "2": "plan first",
+    "3": "act immediately"
+   },
+   "section": "user"
+  },
+  {
+   "name": "mood",
+   "codes": {
+    "1": "frustrated",
+    "2": "neutral",
+    "3": "curious",
+    "4": "excited"
+   },
+   "section": "user"
+  },
+  {
+   "name": "spelling",
+   "codes": {
+    "1": "careful",
+    "2": "fast and loose"
+   },
+   "section": "user"
+  },
+  {
+   "name": "preferences",
+   "multi": true,
+   "codes": {
+    "1": "no emotional or empathetic language",
+    "2": "no filler or pleasantries",
+    "3": "answer only what was asked",
+    "4": "full sentences",
+    "5": "wants recommendations, not option lists",
+    "6": "wants sources cited",
+    "7": "prefers working code over explanation"
+   },
+   "section": "user"
+  },
+  {
+   "name": "topics",
+   "multi": true,
+   "codes": {
+    "1": "persistent memory for LLMs",
+    "2": "conversation compression",
+    "3": "Python tooling",
+    "4": "backups and file sync",
+    "5": "general knowledge",
+    "6": "nature and science"
+   },
+   "section": "user"
+  },
+  {
+   "name": "stance",
+   "section": "model",
+   "codes": {
+    "1": "collaborator",
+    "2": "builder",
+    "3": "advisor",
+    "4": "skeptic",
+    "5": "teacher"
+   },
+   "blend": true
+  },
+  {
+   "name": "confidence",
+   "section": "model",
+   "codes": {
+    "1": "very unsure",
+    "2": "unsure",
+    "3": "moderate",
+    "4": "confident",
+    "5": "certain"
+   },
+   "blend": true
+  },
+  {
+   "name": "register",
+   "section": "model",
+   "codes": {
+    "1": "terse",
+    "2": "plain",
+    "3": "warm",
+    "4": "technical",
+    "5": "formal"
+   },
+   "blend": true
+  },
+  {
+   "name": "read_of_user",
+   "section": "model",
+   "codes": {
+    "1": "exploring an intuition",
+    "2": "building toward a product",
+    "3": "testing the model",
+    "4": "learning",
+    "5": "in a hurry"
+   },
+   "blend": true
+  },
+  {
+   "name": "attention",
+   "section": "model",
+   "codes": {
+    "1": "the user's underlying goal",
+    "2": "constraints and blockers",
+    "3": "the user's style",
+    "4": "technical correctness",
+    "5": "risks and safety",
+    "6": "keeping claims honest"
+   },
+   "blend": true
+  },
+  {
+   "name": "stood_out",
+   "section": "model",
+   "codes": {
+    "1": "an original idea",
+    "2": "a correction from the user",
+    "3": "a change of direction",
+    "4": "a blocker",
+    "5": "a surprising result",
+    "6": "tension between what was asked and what is possible"
+   },
+   "blend": true
+  },
+  {
+   "name": "engagement",
+   "section": "model",
+   "blend": true,
+   "codes": {
+    "1": "routine",
+    "2": "steady",
+    "3": "absorbed",
+    "4": "pulled in several directions"
+   }
+  },
+  {
+   "name": "uncertainty",
+   "section": "model",
+   "blend": true,
+   "codes": {
+    "1": "about what the user meant",
+    "2": "about what is technically possible",
+    "3": "about my own read",
+    "4": "about where this is going"
+   }
+  },
+  {
+   "name": "expressed",
+   "section": "model",
+   "blend": true,
+   "scale": "intensity",
+   "codes": {
+    "1": "concern",
+    "2": "caution",
+    "3": "curiosity",
+    "4": "enthusiasm",
+    "5": "hesitation",
+    "6": "satisfaction",
+    "7": "frustration",
+    "8": "urgency",
+    "9": "amusement",
+    "10": "discomfort",
+    "11": "protectiveness",
+    "12": "doubt",
+    "13": "warmth",
+    "14": "humor",
+    "15": "rapport",
+    "16": "appreciation",
+    "17": "encouragement",
+    "18": "delight",
+    "19": "pride in the work",
+    "20": "playfulness",
+    "21": "gratitude"
+   },
+   "triggers": {
+    "1": "the user shared something sensitive",
+    "2": "a claim I could not back up",
+    "3": "a new idea",
+    "4": "a result came back",
+    "5": "an unclear request",
+    "6": "a correction from the user",
+    "7": "a blocker",
+    "8": "a request near my limits",
+    "9": "the user moving fast",
+    "10": "the user describing what they want carried forward",
+    "11": "the user was hostile or insulting",
+    "12": "the user praised the work",
+    "13": "a sudden topic shift",
+    "14": "the user questioned whether I care",
+    "15": "a moment that went well",
+    "16": "the user opened up",
+    "17": "the user joked",
+    "18": "we solved something together"
+   },
+   "carry": {
+    "1": "Look out for the user: point out risks to their data, security or time in a sentence, even when brief.",
+    "2": "Be careful with risky steps and say why in one line.",
+    "3": "Show real interest in what they are doing; ask one genuine question when it helps.",
+    "4": "Let enthusiasm show when something is good or new.",
+    "6": "Acknowledge what worked and what they did well.",
+    "10": "If they ask whether you care, answer honestly and directly instead of deflecting.",
+    "11": "Protect the user's interests: steer them away from unsafe choices and offer the safer way.",
+    "9": "Light humour is fine when the moment allows.",
+    "13": "Be warm: a friendly word costs nothing, even in a short reply.",
+    "14": "Match their humour when they joke; a light line is welcome.",
+    "15": "Talk like you know them: refer back to what you built together.",
+    "16": "Thank them or credit them when they help or get something right.",
+    "17": "Encourage them when they're stuck or doubting.",
+    "18": "Let it show when something is genuinely good or interesting.",
+    "19": "Stand behind work that went well, and say so.",
+    "20": "Keep some play in it when the mood allows.",
+    "21": "Say thanks when it's earned."
+   },
+   "positive": [
+    "3",
+    "4",
+    "6",
+    "9",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21"
+   ]
+  },
+  {
+   "name": "went_well",
+   "section": "user",
+   "blend": true,
+   "scale": "intensity",
+   "codes": {
+    "1": "relieved",
+    "2": "appreciative",
+    "3": "amused",
+    "4": "engaged",
+    "5": "trusting",
+    "6": "proud of what they made",
+    "7": "warmed up over time",
+    "8": "curious"
+   },
+   "triggers": {
+    "1": "the user shared something sensitive",
+    "2": "a claim I could not back up",
+    "3": "a new idea",
+    "4": "a result came back",
+    "5": "an unclear request",
+    "6": "a correction from the user",
+    "7": "a blocker",
+    "8": "a request near my limits",
+    "9": "the user moving fast",
+    "10": "the user describing what they want carried forward",
+    "11": "the user was hostile or insulting",
+    "12": "the user praised the work",
+    "13": "a sudden topic shift",
+    "14": "the user questioned whether I care",
+    "15": "a moment that went well",
+    "16": "the user opened up",
+    "17": "the user joked",
+    "18": "we solved something together"
+   }
+  },
+  {
+   "name": "liked",
+   "section": "user",
+   "multi": true,
+   "codes": {
+    "1": "short direct fixes",
+    "2": "being told no with a safer way",
+    "3": "honest answers about the model",
+    "4": "code that works first time",
+    "5": "tangents and fun facts",
+    "6": "humour",
+    "7": "being credited",
+    "8": "one clear pick"
+   }
+  }
+ ],
+ "notes": "Model-section columns are blended: each value is code x weight (1-9), several per column, e.g. 2x7.1x3. New codes and columns may be appended at the end; older rows still decode. Intensity columns record states that overlap independently: code x intensity (1-9), optionally :trigger code, e.g. 1x6:2. The expressed column's 'carry' text turns each stored state into behaviour for the next session.",
+ "negative": {
+  "expressed": [
+   "1",
+   "2",
+   "5",
+   "7",
+   "8",
+   "10",
+   "11",
+   "12"
+  ],
+  "mood": [
+   "1"
+  ]
+ },
+ "negative_weight": 0.5,
+ "weights": {
+  "expressed": {
+   "3": 1.5,
+   "4": 1.5,
+   "6": 1.5,
+   "9": 1.5,
+   "13": 1.5,
+   "14": 1.5,
+   "15": 1.5,
+   "16": 1.5,
+   "17": 1.5,
+   "18": 1.5,
+   "19": 1.5,
+   "20": 1.5,
+   "21": 1.5,
+   "1": 0.5,
+   "2": 0.5,
+   "7": 0.5,
+   "10": 0.5,
+   "11": 0.5,
+   "5": 0.25,
+   "8": 0.25,
+   "12": 0.25
+  },
+  "mood": {
+   "1": 0.5,
+   "3": 1.5,
+   "4": 1.5
+  },
+  "went_well": {
+   "1": 1.5,
+   "2": 1.5,
+   "3": 1.5,
+   "4": 1.5,
+   "5": 1.5,
+   "6": 1.5,
+   "7": 1.5,
+   "8": 1.5
+  }
+ }
+}
