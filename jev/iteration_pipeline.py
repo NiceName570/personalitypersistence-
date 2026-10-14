@@ -51,6 +51,17 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser()
     p.add_argument("transcript")
     p.add_argument("observations")
+    p.add_argument("--live", action="store_true", help="Use DefAPI Jev observer")
     args = p.parse_args()
     turns = json.loads(Path(args.transcript).read_text(encoding="utf-8"))
-    print(json.dumps(iterate(turns, fixture_observer, args.observations), indent=2))
+    if args.live:
+        from jev_defapi import observe
+        def live_observer(turn_id, prefix):
+            reply = prefix[-1]["content"]
+            result = observe(reply, turn_id=turn_id)
+            result["evidence"] = [reply[:240]] if reply.strip() else []
+            return result
+        observer = live_observer
+    else:
+        observer = fixture_observer
+    print(json.dumps(iterate(turns, observer, args.observations), indent=2))
