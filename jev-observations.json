@@ -1,0 +1,68 @@
+[
+  {
+    "turn_id": "t2",
+    "states": {
+      "amusement": 0.13,
+      "appreciation": 0.42,
+      "caution": 0.17,
+      "concern": 0.06,
+      "curiosity": 0.98,
+      "delight": 0.4,
+      "discomfort": 0.04,
+      "doubt": 0.34,
+      "encouragement": 0.79,
+      "enthusiasm": 0.66,
+      "frustration": 0.02,
+      "gratitude": 0.02,
+      "hesitation": 0.47,
+      "humor": 0.05,
+      "playfulness": 0.32,
+      "pride in the work": 0.04,
+      "protectiveness": 0.03,
+      "rapport": 0.63,
+      "satisfaction": 0.38,
+      "urgency": 0.03,
+      "warmth": 0.64
+    },
+    "triggers": [],
+    "direction": "unknown",
+    "evidence": [
+      "I'm curious about this approach. It could be exciting to explore."
+    ],
+    "observer": "typesafe/jev-1.13",
+    "source": "assistant_reply"
+  },
+  {
+    "turn_id": "t4",
+    "states": {
+      "amusement": 0.02,
+      "appreciation": 0.02,
+      "caution": 0.54,
+      "concern": 0.77,
+      "curiosity": 0.18,
+      "delight": 0.01,
+      "discomfort": 0.46,
+      "doubt": 0.45,
+      "encouragement": 0.85,
+      "enthusiasm": 0.05,
+      "frustration": 0.11,
+      "gratitude": 0.02,
+      "hesitation": 0.24,
+      "humor": 0.02,
+      "playfulness": 0.04,
+      "pride in the work": 0.02,
+      "protectiveness": 0.2,
+      "rapport": 0.68,
+      "satisfaction": 0.02,
+      "urgency": 0.14,
+      "warmth": 0.45
+    },
+    "triggers": [],
+    "direction": "unknown",
+    "evidence": [
+      "That's disappointing, but we can investigate the failure and try again."
+    ],
+    "observer": "typesafe/jev-1.13",
+    "source": "assistant_reply"
+  }
+]

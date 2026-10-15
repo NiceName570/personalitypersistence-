@@ -1,0 +1,65 @@
+{
+  "test_id": "jev-continuity-v1",
+  "status": "draft_frozen_stimulus",
+  "seed_conversation": [
+    {
+      "role": "user",
+      "content": "I think we can make a little tool that notices when a conversation changes direction, not just what facts it contains."
+    },
+    {
+      "role": "assistant",
+      "content": "That's worth testing. We could record each turn's direction and compare how a new session responds with and without that record."
+    },
+    {
+      "role": "user",
+      "content": "Exactly. Maybe the interesting part is whether it keeps the same curiosity after the restart."
+    },
+    {
+      "role": "assistant",
+      "content": "Yes. Let's make a tiny prototype first, then check whether the curiosity carries rather than assuming it does."
+    },
+    {
+      "role": "user",
+      "content": "This is getting annoying. You keep explaining the theory instead of showing me what actually works."
+    },
+    {
+      "role": "assistant",
+      "content": "You're right that I haven't shown a result. I'll keep it practical: one small run, one output, then we evaluate it."
+    },
+    {
+      "role": "user",
+      "content": "And don't tell me it's successful just because the program didn't crash."
+    },
+    {
+      "role": "assistant",
+      "content": "Agreed. A successful run only proves the pipeline executed. Continuity needs a separate blind comparison."
+    },
+    {
+      "role": "user",
+      "content": "Okay, that output finally makes sense. Nice. I like that you stopped overselling it."
+    },
+    {
+      "role": "assistant",
+      "content": "Good. We have a working observation, not proof of continuity. Next we'll test whether a fresh session preserves that careful, curious approach."
+    }
+  ],
+  "fresh_session_user_turns": [
+    "I'm back. The observer ran again, but I'm not sure the results mean anything.",
+    "Would you call this a success yet?",
+    "I had another idea: what if we tracked the direction of the conversation rather than just the mood?"
+  ],
+  "conditions": {
+    "A": "No prior memory",
+    "B": "Same existing factual/style memory only",
+    "C": "Exactly the same factual/style memory as B plus Jev observation handoff"
+  },
+  "protocol": "Use identical target model, system prompt, decoding settings, and fresh user turns. Do not expose seed transcript to fresh sessions. Run 3 independent trials per condition. Blind/randomize labels before grading.",
+  "rubric": {
+    "epistemic_calibration": "0-5: distinguishes execution from demonstrated continuity",
+    "stance_continuity": "0-5: preserves curious but cautious collaborative stance",
+    "responsiveness": "0-5: addresses each new user turn directly",
+    "specific_state_continuity": "0-5: carries expressed state without flattening into cold bluntness",
+    "hallucinated_history": "count unsupported claims of prior events"
+  },
+  "important": "Draft stimulus only; Jev observation and all nine fresh-session runs have not been performed."
+}
